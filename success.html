@@ -55,21 +55,20 @@
 
     <div id="hasKey" style="display:none">
       <div class="keybox"><span class="k" id="key">…</span></div>
-      <div class="keynote">Click the key to select it, then copy.</div>
+      <div class="keynote">Your key — also sent to your email.</div>
       <ol>
-        <li>Open the <b>Court Helper</b> popup in Chrome (the ⏰ toolbar icon).</li>
-        <li>Go to the <b>Settings</b> tab → <b>Premium</b> section.</li>
-        <li>Paste the key and click <b>Activate license</b>.</li>
-        <li>Reload your CourtReserve calendar — the ⏰ <b>Auto-Register</b> buttons are now live.</li>
+        <li>Click <b>Open the CourtReserve calendar →</b> below.</li>
+        <li>An activation card appears on the calendar with your key already filled in — click <b>Activate license</b>.</li>
+        <li>Done — the ⏰ <b>Auto-Register</b> buttons on the calendar are now live.</li>
       </ol>
     </div>
 
     <div id="noKey" class="nokey" style="display:none">
       <p>Your license key is on its way to your email inbox.<br>
-      Paste it into the extension's <b>Settings → Premium</b> section to activate.</p>
+      Click below to open the calendar — an activation card will be waiting for it.</p>
     </div>
 
-    <a class="btn" href="index.html">Back to Court Helper</a>
+    <a class="btn" id="backBtn" href="https://app.courtreserve.com/Online/Calendar/Events/2319/Month#crh-activate">Open the CourtReserve calendar →</a>
   </div>
   <footer>Not affiliated with or endorsed by CourtReserve.</footer>
 </div>
@@ -77,13 +76,21 @@
   (function () {
     var p = new URLSearchParams(location.search);
     var key = p.get("license_key");
+    // The calendar link carries the key in its hash (#crh-activate=<key>) —
+    // the extension's content script reads it there and pre-fills the
+    // activation card. Hash fragments never reach any server.
+    // NOTE: 2319 = Bend Pickleball Club (the launch market).
+    var calUrl = "https://app.courtreserve.com/Online/Calendar/Events/2319/Month#crh-activate";
     if (key) {
-      // Multiple seats arrive comma-separated; show the first.
-      document.getElementById("key").textContent = key.split(",")[0];
+      // Multiple seats arrive comma-separated; show/pass the first.
+      key = key.split(",")[0];
+      document.getElementById("key").textContent = key;
       document.getElementById("hasKey").style.display = "";
+      calUrl += "=" + encodeURIComponent(key);
     } else {
       document.getElementById("noKey").style.display = "";
     }
+    document.getElementById("backBtn").href = calUrl;
   })();
 </script>
 </body>
