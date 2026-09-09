@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Beta Test Program — Court Helper for CourtReserve</title>
+<meta name="description" content="Download the beta build of Court Helper for CourtReserve: install instructions, test-mode Premium, and what happens at launch.">
+<style>
+  :root {
+    --teal: #0d9488; --teal-dark: #0f766e; --purple: #7c3aed;
+    --ink: #1c1917; --muted: #57534e; --faint: #78716c;
+    --line: #e7e5e4; --bg: #fafaf9; --card: #ffffff; --amber: #b45309;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: var(--ink); background: var(--bg);
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 48px 20px 64px; }
+  .badge {
+    display: inline-block; font-size: 12px; font-weight: 700; text-transform: uppercase;
+    letter-spacing: .06em; background: #fef3c7; color: var(--amber);
+    padding: 3px 12px; border-radius: 999px; margin-bottom: 14px;
+  }
+  h1 { font-size: 28px; margin-bottom: 8px; }
+  .sub { color: var(--muted); margin-bottom: 28px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 16px;
+    padding: 28px 32px; margin-bottom: 20px; box-shadow: 0 4px 14px rgba(0,0,0,.04);
+  }
+  .card h2 { font-size: 18px; margin-bottom: 12px; }
+  .card h2 .n {
+    display: inline-block; width: 26px; height: 26px; line-height: 26px; text-align: center;
+    background: var(--teal); color: #fff; border-radius: 8px; font-size: 14px; margin-right: 8px;
+  }
+  ol, ul { padding-left: 22px; color: var(--muted); }
+  li { margin-bottom: 8px; }
+  li b, p b { color: var(--ink); }
+  code {
+    background: #f5f5f4; border: 1px solid var(--line); border-radius: 6px;
+    padding: 1px 6px; font-size: 13.5px; font-family: ui-monospace, Menlo, monospace;
+    word-break: break-all;
+  }
+  pre {
+    background: #1c1917; color: #e7e5e4; border-radius: 10px; padding: 14px 16px;
+    font: 13px/1.6 ui-monospace, Menlo, monospace; overflow-x: auto; margin: 10px 0;
+  }
+  pre .c { color: #a8a29e; }
+  .btn {
+    display: inline-block; text-decoration: none; font-weight: 700;
+    background: var(--teal); color: #fff; padding: 13px 28px; border-radius: 10px;
+  }
+  .btn:hover { background: var(--teal-dark); }
+  .btn.purple { background: var(--purple); }
+  .btn.purple:hover { background: #6d28d9; }
+  .dl { text-align: center; padding: 32px; }
+  .dl .ver { color: var(--faint); font-size: 13.5px; margin-top: 10px; }
+  .callout {
+    background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px;
+    padding: 14px 16px; color: #78350f; font-size: 14.5px; margin: 14px 0;
+  }
+  .fine { color: var(--faint); font-size: 13.5px; }
+  footer { text-align: center; color: var(--faint); font-size: 13px; margin-top: 32px; }
+  footer a { color: var(--teal); text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="badge">Beta · Test Mode</span>
+  <h1>Court Helper for CourtReserve</h1>
+  <p class="sub">You're invited to the beta test program. Everything on this page is free —
+  payments run in <b>test mode</b>, so no real money ever moves.</p>
+
+  <div class="card dl">
+    <h2 style="margin-bottom:14px;">Download the beta</h2>
+    <a class="btn" href="CourtReserveExtension-latest-test.zip">⬇ Download the extension (.zip)</a>
+    <div class="ver">Current beta: <b>v1.5.12</b> · Chrome / Edge / Brave on Mac or Windows</div>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">1</span>Install the extension</h2>
+    <ol>
+      <li><b>Unzip</b> the download. You get a folder named <code>CourtReserveExtension</code>.
+          Put it somewhere permanent — Documents is a good spot. (Chrome loads it
+          <i>from that folder</i>; if you move or delete the folder, the extension breaks.)</li>
+      <li>In Chrome, open <code>chrome://extensions</code>.</li>
+      <li>Turn on <b>Developer mode</b> (toggle, top-right).</li>
+      <li>Click <b>Load unpacked</b> and select the <code>CourtReserveExtension</code> folder.</li>
+      <li>Click the puzzle-piece icon in the toolbar and <b>pin</b> ⏰ Court Helper.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">2</span>First-run setup (automatic)</h2>
+    <ol>
+      <li>Open <b>CourtReserve</b> in a tab and log in.</li>
+      <li>Open your club's <b>Calendar</b> (Month view).</li>
+      <li>Click the ⏰ <b>Court Helper</b> toolbar icon. Setup runs itself:
+          it finds your club, loads the calendar's categories, and detects when
+          registration opens. You'll see "Setup complete ✓" — click <b>Continue</b>.</li>
+      <li>In <b>Settings</b>, tick the categories you play (e.g. <i>4.0+ Round Robin</i>).
+          That's it — dates whose registration opens that day now appear <b>bold</b> on
+          the calendar; hover one to see exactly which events open.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2><span class="n">3</span>Try Premium — free, in test mode</h2>
+    <p style="color:var(--muted);margin-bottom:12px;">Premium unlocks ⏰ <b>Auto-Register</b>:
+    the extension registers you the moment the window opens. During the beta you can
+    activate it with a <b>test card — nothing is ever charged</b>:</p>
+    <ol>
+      <li>Open the extension → <b>Settings</b> → <b>Premium</b> → <b>Upgrade to Premium</b>.</li>
+        <li>At checkout use any name/address, your real email (that's where the license
+          key goes), and the test card:
+          <pre>Card:  4242 4242 4242 4242
+Exp:   06 / 32
+CVC:   123</pre></li>
+      <li>After "payment" you'll land on the success page. Click
+          <b>Open the CourtReserve calendar →</b>: an <b>Activate Premium</b> card appears
+          on the calendar with your license key already filled in. One click on
+          <b>Activate license</b> and Premium is live.</li>
+    </ol>
+    <div class="callout">⚠ <b>Auto-Register fires only if:</b> Chrome is running, your
+    computer is awake, you're logged into CourtReserve, and the extension is enabled.
+    Mac users — to wake your Mac every morning at 6:58 AM, run this once in Terminal:
+    <pre>sudo pmset repeat wakeorpoweron MTWRFSU 06:58:00 <span class="c"># check with: pmset -g sched</span></pre></div>
+  </div>
+
+  <div class="card">
+    <h2>What happens when we go live?</h2>
+    <p style="color:var(--muted);margin-bottom:12px;">The beta runs against the payment
+    provider's <b>test environment</b>. When Court Helper launches on the Chrome Web Store,
+    here's the conversion process — no surprises:</p>
+    <ol>
+      <li><b>Test licenses stop working.</b> All beta license keys are deactivated on
+          launch day. The extension checks licenses about once a week, so Auto-Register
+          will switch off within days of launch and the popup will show Premium as inactive.</li>
+      <li><b>Install the live version.</b> Come back to this page (or the Chrome Web Store
+          listing) and install the live build — it replaces the beta.</li>
+      <li><b>Activate with a real subscription</b> — <b>$15/year</b>, cancel anytime.
+          You'll get a new license key and activate it the same one-click way.</li>
+      <li><b>Your settings carry over</b> — organization, categories, and registration
+          window are stored locally and survive the switch.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Questions testers ask</h2>
+    <p><b>Does the test card charge me?</b><br>
+    <span class="fine">No. Test mode simulates everything — the "payment", the email, the
+    license key — and never touches a real bank account.</span></p>
+    <p style="margin-top:12px;"><b>How does the 1-year subscription work?</b><br>
+    <span class="fine">A Premium license is valid while your subscription is active.
+    It renews yearly at $15 unless you cancel; if a renewal fails or you cancel,
+    the extension locks Premium at its next weekly license check. Re-activate any time.</span></p>
+    <p style="margin-top:12px;"><b>My license key didn't arrive.</b><br>
+    <span class="fine">Check spam for an email from Dodo Payments. Still stuck? Reply to the
+    beta invite and I'll send your key.</span></p>
+    <p style="margin-top:12px;"><b>Found a bug?</b><br>
+    <span class="fine">Reply to the beta invite with what you clicked and what happened —
+    screenshots welcome.</span></p>
+  </div>
+
+  <p class="fine" style="text-align:center;">
+    <a href="index.html" style="color:var(--teal);text-decoration:none;">← Main product page</a>
+  </p>
+
+  <footer>
+    Not affiliated with or endorsed by CourtReserve. ·
+    <a href="privacy.html">Privacy</a>
+  </footer>
+</div>
+</body>
+</html>
