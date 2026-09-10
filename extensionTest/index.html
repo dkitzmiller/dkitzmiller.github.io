@@ -128,8 +128,12 @@ CVC:   123</pre></li>
     </ol>
     <div class="callout">⚠ <b>Auto-Register fires only if:</b> Chrome is running, your
     computer is awake, you're logged into CourtReserve, and the extension is enabled.
-    Mac users — to wake your Mac every morning at 6:58 AM, run this once in Terminal:
-    <pre>sudo pmset repeat wakeorpoweron MTWRFSU 06:58:00 <span class="c"># check with: pmset -g sched</span></pre></div>
+    <br><b>Mac</b> — to wake your Mac every morning at 6:58 AM, run this once in Terminal:
+    <pre>sudo pmset repeat wakeorpoweron MTWRFSU 06:58:00 <span class="c"># check with: pmset -g sched</span></pre>
+    <b>Windows</b> — open <b>Task Scheduler</b> → <b>Create Task</b> → Triggers:
+    <b>Daily at 6:58 AM</b> → Actions: <code>cmd /c exit</code> → Conditions: check
+    <b>"Wake the computer to run this task"</b>. Also set <b>Power Options → advanced
+    settings → Sleep → Allow wake timers → Enable</b>.</div>
   </div>
 
   <div class="card">
